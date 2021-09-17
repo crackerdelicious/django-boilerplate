@@ -8,7 +8,7 @@ $ source venv/bin/activate
 
 2. Clone this repository
 ```
-$ git clone https://github.com/crackerdelicious/django-boilerplate.git
+$ git clone https://github.com/crackerdelicious/django-boilerplate.git .
 $ pip install -R requirements.txt
 ```
 
