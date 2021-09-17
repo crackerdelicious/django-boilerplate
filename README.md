@@ -28,3 +28,31 @@ $ python manage.py shell
 >>> print(get_random_secret_key())
 >>> # Copy the new secret key and put it at config.json
 ```
+
+5. Create a new app
+```
+### At your-project-dir/www
+$ mkdir apps/<app-name>
+$ django-admin startapp <app-name> apps/<app-name>
+```
+- In the apps.py in your app
+    Change this
+```
+name = '<app-name>'
+```
+    To this
+```
+name = 'apps.<app-name>'
+```
+- In the settings.py at INSTALLED_APPS
+```
+INSTALLED_APPS = [
+    ...
+    # local apps
+    'apps.accounts.apps.AccountsConfig',
+    'apps.home.apps.HomeConfig',
+    'apps.<your-app-name>.apps.<app-config-class>',
+    # 3rd apps
+    ...
+]
+```
