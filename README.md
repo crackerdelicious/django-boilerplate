@@ -26,7 +26,7 @@ $ pip install -R requirements.txt
 <your-project-dir>$ cd etc
 <your-project-dir>/etc$ nano config.json
 ```
-4.1 In your config.json
+    - In your config.json
 ```
 {
     "SECRET_KEY": "<Read how to generate a secret key within settings.py at SECRET_KEY>"
