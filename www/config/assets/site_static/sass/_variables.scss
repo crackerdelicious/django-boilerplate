@@ -1,0 +1,6 @@
+$custom-colors: (
+  "dark-primary": shade-color($primary, 50%)
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
