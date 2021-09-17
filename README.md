@@ -5,7 +5,7 @@ $ cd your-project-dir
 $ git clone https://github.com/crackerdelicious/django-boilerplate.git .
 $ python -m venv venv
 $ source venv/bin/activate
-$ pip install -R requirements.txt
+$ pip install -r requirements.txt
 ```
 
 3. Attach bootstrap
