@@ -1,9 +1,9 @@
 1. Setting project directory
 ```
-$ mkdir <your-project-dir>
-$ cd <your-project-dir>
-<your-project-dir>$ python -m venv venv
-<your-project-dir>$ source venv/bin/activate
+$ mkdir your-project-dir
+$ cd your-project-dir
+your-project-dir$ python -m venv venv
+your-project-dir$ source venv/bin/activate
 ```
 
 2. Clone this repository
@@ -14,17 +14,19 @@ $ pip install -R requirements.txt
 
 3. Attach bootstrap
 ```
-<your-project-dir>$ cd www/config/assets
-<your-project-dir>/www/config/assets$ mkdir node_modules
-<your-project-dir>/www/config/assets$ cd node_modules
-<your-project-dir>/www/config/assets/node_modules$ npm install bootstrap
+your-project-dir$ cd www/config/assets
+your-project-dir/www/config/assets$ mkdir node_modules
+your-project-dir/www/config/assets$ cd node_modules
+your-project-dir/www/config/assets/node_modules$ npm install bootstrap
 ```
 
 4. Attach config file
 ```
-<your-project-dir>$ mkdir etc
-<your-project-dir>$ cd etc
-<your-project-dir>/etc$ nano config.json
+your-project-dir$ mkdir etc
+your-project-dir$ cd etc
+your-project-dir/etc$ nano config.json
+```
+
 ```
 # In your config.json
 {
