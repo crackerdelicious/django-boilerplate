@@ -36,12 +36,11 @@ $ mkdir apps/<app-name>
 $ django-admin startapp <app-name> apps/<app-name>
 ```
 - In the apps.py in your app
-    Change this
+    
 ```
+# Change this
 name = '<app-name>'
-```
-    To this
-```
+# To this
 name = 'apps.<app-name>'
 ```
 - In the settings.py at INSTALLED_APPS
