@@ -167,5 +167,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 SITE_INFO = {
     "title": _("Your site title here."),
     "description": _("Your site description here"),
-    "separator": "|"
+    "separator": "|",
 }
