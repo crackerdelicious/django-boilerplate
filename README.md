@@ -1,14 +1,10 @@
-1. Setting project directory
+1. Setting project directory.
 ```
 $ mkdir your-project-dir
 $ cd your-project-dir
+$ git clone https://github.com/crackerdelicious/django-boilerplate.git .
 $ python -m venv venv
 $ source venv/bin/activate
-```
-
-2. Clone this repository
-```
-$ git clone https://github.com/crackerdelicious/django-boilerplate.git .
 $ pip install -R requirements.txt
 ```
 
