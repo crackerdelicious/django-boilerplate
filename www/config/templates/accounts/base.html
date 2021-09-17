@@ -1,0 +1,37 @@
+{% load i18n %}
+
+{% extends 'base.html' %}
+
+{% block title %}
+
+{% if URL_NAME == 'login' %}{% trans "Login" %}
+
+{% elif URL_NAME == 'logout' %}{% trans "Logged out" %}
+
+{% elif URL_NAME == 'profile' %}{% trans "Welcome " %}
+
+    {% if request.user.first_name %}
+
+        {{ request.user.first_name }}
+
+    {% else %}
+
+        {{ request.user.username }}
+
+    {% endif %}    
+
+{% endif %}
+
+{% endblock title %}
+
+{% block content %}
+
+{% if URL_NAME == 'login' %}{% include 'accounts/registration/login.html' %}
+
+{% elif URL_NAME == 'logout' %}{% include 'accounts/registration/logged_out.html' %}
+
+{% elif URL_NAME == 'profile' %}{% include 'accounts/profile/dashboard.html' %}
+
+{% endif %}
+
+{% endblock content %}

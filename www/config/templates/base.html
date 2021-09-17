@@ -1,0 +1,52 @@
+{% load static i18n %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+{% define request.resolver_match.app_name as APP_NAME %}
+{% define request.resolver_match.url_name as URL_NAME %}
+
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'fontawesome_free/css/all.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+  <title>{% block title %}{% site_info 'title' %}{% endblock %}</title>
+  <meta name="description" content="{% site_info 'description' %}">
+</head>
+<body>
+  <header class="header {{ APP_NAME }}">
+
+    <div class="container-fluid {{ APP_NAME }}__{{ URL_NAME }}">
+
+      {% include 'template-parts/header.html' %}
+
+    </div>
+
+  </header>
+
+  <main class="main {{ APP_NAME }}">
+    
+    <div class="container {{ APP_NAME }}__{{ URL_NAME }}">
+
+    {% block content %}{% endblock content %}
+
+    </div>
+
+  </main>
+
+  <footer class="footer {{ APP_NAME }}">
+
+    {% include 'template-parts/footer.html' %}
+
+  </footer>
+  
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+  {% block script %}{% endblock script %}
+</body>
+</html>

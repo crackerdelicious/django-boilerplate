@@ -52,8 +52,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # local apps
     'apps.accounts.apps.AccountsConfig',
     'apps.home.apps.HomeConfig',
+    # 3rd apps
+    'fontawesome_free',
 ]
 
 MIDDLEWARE = [
@@ -151,3 +154,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'config', 'assets', 'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SITE_INFO = {
+    "title": _("Your site title here."),
+    "description": _("Your site description here"),
+    "separator": "|"
+}

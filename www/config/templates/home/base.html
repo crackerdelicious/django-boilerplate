@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load i18n %}
+
+{% block title %}
+
+{% if URL_NAME == 'homepage' %}{% trans "Welcome to our website" %}{% endif %}
+
+{% site_info 'separator' %} {{ block.super }}
+
+{% endblock title %}
+
+{% block content %}
+
+{% if URL_NAME == 'homepage' %}{% include 'home/homepage.html' %}
+
+{% endif %}
+
+{% endblock content %}
